@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": false,
+    "declaration": false,
+    "strictFunctionTypes": false,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./node_modules/@ludd/",
+      "./types"
+    ],
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+  ]
+}

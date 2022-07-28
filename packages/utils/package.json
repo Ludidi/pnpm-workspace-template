@@ -1,0 +1,41 @@
+{
+  "name": "@ludd/utils",
+  "version": "1.0.0",
+  "description": "ludd utils",
+  "author": "luddlu@humanludd.com",
+  "source": "./src/index.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.humanludd.com/web/core/ludd.git"
+  },
+  "scripts": {
+    "build": "rimraf lib & tsc",
+    "release": "pnpm build && pnpm publish",
+    "clean": "rimraf lib",
+    "lint": "eslint './*.ts'",
+    "lint:types": "tsc --noEmit",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@ludd/types": "workspace:^0.0.1",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.3",
+    "mitt": "^3.0.0",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
+  }
+}
